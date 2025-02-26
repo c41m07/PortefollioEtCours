@@ -1,0 +1,300 @@
+/* --- Réinitialisation globale --- */
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* --- Variables CSS --- */
+:root {
+    --text-color: 0, 0, 0;
+    --nav-color: 244, 244, 244;
+    --background-color: 255, 160, 122;
+    --background-color2: 0, 0, 255;
+    --background-blanc: 255, 255, 255;
+    --footer-color: 244, 244, 244;
+    --border-color: 160, 82, 45;
+    --hover-color: 255, 0, 0;
+    --shadow-color: 0, 0, 0;
+}
+
+/* --- Corps de la page --- */
+body {
+    background-color: rgb(var(--background-blanc));
+    max-width: 900px;
+    margin: 0 auto;
+    color: rgb(var(--text-color));
+    line-height: 1.6;
+    padding: 10px;
+    background-image: url('/src/asset/img/backgroundBureau.webp');
+    background-attachment: fixed;
+    background-size: 115%;
+    background-position: right 10% top 50%;
+    border-top: 30px solid rgba(var(--background-blanc), 0);
+}
+
+/* --- En-tête et navigation --- */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: rgb(var(--nav-color));
+    border-bottom: 2px solid #ddd;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.header ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: rgb(var(--text-color));
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header ul li a:hover {
+    color: rgb(var(--hover-color));
+}
+
+/* --- Contenu principal --- */
+.core {
+    background-color: rgba(var(--background-blanc), 1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 15px solid transparent;
+    background-clip: padding-box;
+    box-shadow: inset 0 0 5px 1px rgb(var(--border-color));
+    border-top: 30px solid rgba(var(--background-blanc), 0);
+}
+
+/* --- Colonnes principales et secondaires --- */
+.maingrid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 0.5;
+    background-color: rgba(var(--background-color), 0.1);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.right {
+    flex: 1;
+    background-color: rgba(var(--background-color2), 0.2);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* --- Sections image --- */
+.Photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(var(--hover-color));
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* --- Texte et sections de contenu --- */
+h2, h4, h5 {
+    color: rgb(var(--text-color));
+}
+
+#Presentation h1, #Xp h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.slide {
+    margin: 20px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.slide:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 15px rgba(var(--shadow-color), 0.2);
+}
+
+.barrette::before {
+    content: ''; /* Crée un élément visuel sans texte */
+    display: block; /* Affiche l'élément sur une ligne séparée */
+    width: 50px; /* Largeur de la barre rouge */
+    height: 4px; /* Hauteur de la barre rouge */
+    background-color: rgba(var(--hover-color), 0.5); /* Rouge transparent */
+    margin-bottom: 10px; /* Espacement en dessous de la barre */
+}
+
+#contact {
+    text-align: center;
+}
+
+#Bdownload {
+    display: flex;
+    justify-content: center; 
+    
+}
+section button {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, rgb(var(--background-color)) 0, rgb(var(--background-color2)) 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(var(--shadow-color), 0.4) 0 2px 4px,
+                rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
+                rgba(var(--shadow-color), 0.5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: rgb(var(--background-blanc));
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+section button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section button:focus {
+    box-shadow: rgb(var(--background-color2)) 0 0 0 1.5px inset,
+                rgba(var(--shadow-color), 0.4) 0 2px 4px,
+                rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
+                rgb(var(--background-color2)) 0 -3px 0 inset;
+}
+
+section button:hover {
+    box-shadow: rgba(var(--shadow-color), 0.4) 0 4px 8px,
+                rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
+                rgb(var(--hover-color)) 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+section button:active {
+    box-shadow: rgb(var(--hover-color)) 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+/* --- Listes et éléments spécifiques --- */
+#Competences li, #Interets li {
+    list-style: circle; /* Utilise des cercles comme puces */
+    margin-left: 20px; /* Décalage des puces */
+}
+
+#Xp ul li div {
+    text-align: right; /* Aligne à droite */
+    font-style: italic; /* Texte en italique */
+    margin-bottom: 10px; /* Espacement en dessous */
+}
+
+
+
+/* --- Pied de page --- */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(var(--footer-color));
+    border-top: 2px solid #ddd;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+/* --- Animations --- */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Invisible */
+        transform: translateX(-20px); /* Glisse depuis la gauche */
+    }
+    to {
+        opacity: 1; /* Devient visible */
+        transform: translateX(0); /* Glisse à sa position d'origine */
+    }
+}
+
+ul li {
+    opacity: 0; /* Caché par défaut */
+    animation: slideIn 0.8s ease-in-out forwards; /* Animation de glissement */
+}
+
+section,
+article,
+li:nth-child(n1+1) {
+    animation-delay: 1s; /* Délai d'animation */
+}
+
+
+/* --- Media queries pour le responsive --- */
+@media (max-width: 768px) {
+    .maingrid {
+        flex-direction: column;
+    }
+    
+    .scdgrid {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header ul {
+        font-size: 14px;
+    }
+    
+    h1, h2 {
+        font-size: 18px;
+    }
+    
+    h4, h5, p {
+        font-size: 14px;
+    }
+    
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+}

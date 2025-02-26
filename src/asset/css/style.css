@@ -1,0 +1,233 @@
+/* ======================================
+   Styles Globaux
+   - Styles de base et réinitialisation
+====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style pour le corps de la page */
+body {
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #e0e0e0;            /* Couleur du texte claire */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    overflow-x: hidden;        /* Empêche le défilement horizontal */
+}
+
+/* ======================================
+   Navigation
+   - Styles pour la barre de navigation supérieure
+====================================== */
+nav {
+    position: fixed;           /* Navigation fixe en haut */
+    top: 0;
+    width: 100%;
+    background: #1e1e1e;       /* Fond de la barre de navigation */
+    border-bottom: 1px solid #333; /* Bordure inférieure */
+    z-index: 1000;             /* Assure la superposition au-dessus des autres éléments */
+}
+
+nav ul {
+    list-style: none;          /* Suppression des puces */
+    display: flex;             /* Utilisation de flexbox */
+    align-items: center;
+    justify-content: center;   /* Centre le contenu */
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Premier élément (logo) sans redimensionnement */
+nav ul li:first-child {
+    flex: 0;
+}
+
+/* Deuxième élément centré */
+nav ul li:nth-child(2) {
+    flex: 1;
+    text-align: center;
+}
+
+/* Styles pour les liens de navigation */
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+    margin: 1%;
+}
+
+nav ul li a:hover {
+    color: #39ff14;            /* Changement de couleur au survol */
+}
+
+/* Style pour le logo dans la navigation */
+nav ul li:first-child a img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* ======================================
+   Splash / Header / Footer
+   - Styles pour l'écran d'accueil et l'en-tête / pied de page
+====================================== */
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#splash h1 {
+    color: #ff073a;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #ff073a;
+}
+
+/* Style pour l'en-tête */
+#header {
+    position: fixed;
+}
+
+/* Style pour le pied de page */
+#footer {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    text-align: center;
+    align-content: center;
+    margin-top: 10px;
+    position: fixed;
+    bottom: 3px;
+    width: 100%;
+    border-top: 1px solid #333;
+    top: 90%;
+}
+
+/* Styles supplémentaires pour le contenu du pied de page */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-icons {
+    margin-bottom: 10px;
+}
+
+.footer-icons a {
+    margin-right: 10px;
+}
+
+.footer-icons a svg:hover {
+    transform: scale(1.2);
+    /* Transformation pour agrandir l'icône lors du survol */
+    color: #39ff14;
+}
+
+/* ======================================
+   Sections Principales
+   - Styles communs pour les sections : Accueil, À Propos, Projets, Contact
+====================================== */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;         /* Hauteur minimale égale à la hauteur de la fenêtre */
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;              /* Centrage du conteneur */
+}
+
+h2 {
+    font-family: Times New Roman, serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #39ff14; /* Effet d'ombre sur le texte */
+}
+
+/* ======================================
+   Galerie de Projets
+   - Styles pour la grille de projets et les cartes
+====================================== */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 15px;
+    width: 300px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: auto;
+}
+
+.card:hover {
+    transform: scale(1.05);    /* Agrandir légèrement la carte au survol */
+    box-shadow: 0 0 15px #39ff14; /* Ajout d'une ombre pour mettre en valeur */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* ======================================
+   Styles pour le Formulaire de Contact
+   - Styles spécifiques pour le formulaire de contact
+====================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    font-size: 1.1em;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+form button {
+    background: #39ff14;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #2ecc71;        /* Changement de couleur au survol du bouton */
+}
