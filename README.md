@@ -1,8 +1,10 @@
 # PortefollioEtCours
 PortefollioEtCours est un site web qui a pour but de présenter mes projets et mes compétences en développement web.
 
+php -S 127.0.0.1:80
+
 ```
-____      __      ___  ___  ___ 
+ ____      __      ___  ___  ___ 
 / ___|    /  \    |_ _| |  \/  |
 | |      / __ \    | |  | |\/| |
 | |___  / ____ \   | |  | |  | |
@@ -50,15 +52,14 @@ ____      __      ___  ___  ___
 ```
 
 Bug a Fix:
--voir pourquoi le bouton de précédent du navigateur ne fonctionne pas dans WIP.html et renvoie sur une page sans CSS ni Js.
--voir pourquoi la navbar et le footer ne s'affiche pas dans WIP.html.
--voir pourquoi le backgrounf de la page CV ne s'affiche pas.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 feature a intégrer:
 -WIP.html doit permettre de retourner sur index.html via la nav bar home
 -WIP.html ne doit afficher que home dans la nav bar
+-Faire en sorte que le bouton trash de la page todoList.html supprime la tache correspondante
+-Faire en sorte que le bouton check de la page todoList.html valide la tache correspondante
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -67,8 +68,14 @@ update a venir:
 -revoir le design de la page CV pour qu'elle corresponde au design du site et qu'elle soit responsive.
 -rendre responsive la page WIP.html
 -rendre responsive la page index.html
+-rendre responsive la page todoList.html
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Projets a construire:
+- Créé un CV en HTML/CSS 
+- Créé un site web pour une association en HTML/CSS
+- Créé une todoList en HTML/CSS/JS
 
 ```
 ------------------------------------------------------------------------------------------------------------------------
@@ -76,5 +83,5 @@ update a venir:
 ```
 auteur: Kévin le stang
 date de création: 24/02/2025
-dernière mise à jour: 24/02/2025
+dernière mise à jour: 27/02/2025
 ```

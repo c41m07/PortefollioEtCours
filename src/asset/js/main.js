@@ -21,7 +21,7 @@ function initSplashScreen() {
 // ===================================================================
 function initSmoothScrolling() {
     // Récupère tous les liens de navigation ayant la classe .nav-link
-    const navLinks = document.querySelectorAll(".nav-link");
+    const navLinks = document.querySelectorAll(".menu");
     navLinks.forEach(link => {
         link.addEventListener("click", function(e) {
             e.preventDefault();
