@@ -1,0 +1,130 @@
+#home form{
+    flex-direction: row !important;
+}
+
+#home .input {
+    flex: 1;
+    order: 1;
+    width: auto;
+}
+
+#home select {
+    order: 3;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #39ff14;
+    color: #121212;
+    cursor: pointer;
+    margin-right: 0;
+    width: auto;
+    flex-shrink: 0;
+}
+
+#home select:focus {
+    background: #ff073a;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.add {
+    order: 2;
+    white-space: nowrap;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 60px;
+    margin-left: 30%;
+    margin-right: 30%;
+    list-style-type: none;
+}
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+.text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: #1e1e1e;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #39ff14;
+}
+
+.todo-item button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #39ff14;
+    color: #121212;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.todo-item button i {
+    pointer-events: none;
+}
+
+.delete:hover {
+    background: #ff073a;
+    color: #e0e0e0;
+
+}
+
+.checkbox:hover {
+    background: #2ecc71;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+    background: #1e1e1e;
+    border: 1px solid #ff073a;
+}
+
+.notifError {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: rgba(255, 7, 58, 0.9);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.notifError.pop {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.notifError i {
+    font-size: 18px;
+}

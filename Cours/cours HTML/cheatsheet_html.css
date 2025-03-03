@@ -1,22 +1,26 @@
-.mon_texte{
+.mon_texte {
     color: blueviolet;
     font-size: 48px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#presentation{
+
+#presentation {
     background-color: blue;
     height: 300px;
     width: 100%;
 }
-ul{
+
+ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
 }
-h1{
+
+h1 {
     color: blue;
 }
-p{
+
+p {
     color: crimson;
 }

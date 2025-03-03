@@ -23,13 +23,13 @@ function initSmoothScrolling() {
     // Récupère tous les liens de navigation ayant la classe .nav-link
     const navLinks = document.querySelectorAll(".menu");
     navLinks.forEach(link => {
-        link.addEventListener("click", function(e) {
+        link.addEventListener("click", function (e) {
             e.preventDefault();
             // Récupère l'élément cible grâce à l'attribut href
             const targetElement = document.querySelector(this.getAttribute("href"));
             if (targetElement) {
                 // Fait défiler la page vers l'élément cible avec une transition fluide
-                targetElement.scrollIntoView({ behavior: "smooth" });
+                targetElement.scrollIntoView({behavior: "smooth"});
             }
         });
     });
@@ -99,7 +99,7 @@ function initContactForm() {
     const contactForm = document.getElementById("contact-form");
     if (!contactForm) return; // Vérifie que le formulaire existe
     // Ajoute un gestionnaire d'événement sur la soumission du formulaire
-    contactForm.addEventListener("submit", function(e) {
+    contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
         // Affiche un message de confirmation
         alert("Merci pour votre message !");

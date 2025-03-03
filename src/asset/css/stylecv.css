@@ -156,9 +156,10 @@ h2, h4, h5 {
 
 #Bdownload {
     display: flex;
-    justify-content: center; 
-    
+    justify-content: center;
+
 }
+
 section button {
     align-items: center;
     appearance: none;
@@ -166,8 +167,8 @@ section button {
     border: 0;
     border-radius: 6px;
     box-shadow: rgba(var(--shadow-color), 0.4) 0 2px 4px,
-                rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
-                rgba(var(--shadow-color), 0.5) 0 -3px 0 inset;
+    rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
+    rgba(var(--shadow-color), 0.5) 0 -3px 0 inset;
     box-sizing: border-box;
     color: rgb(var(--background-blanc));
     cursor: pointer;
@@ -199,15 +200,15 @@ section button a {
 
 section button:focus {
     box-shadow: rgb(var(--background-color2)) 0 0 0 1.5px inset,
-                rgba(var(--shadow-color), 0.4) 0 2px 4px,
-                rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
-                rgb(var(--background-color2)) 0 -3px 0 inset;
+    rgba(var(--shadow-color), 0.4) 0 2px 4px,
+    rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
+    rgb(var(--background-color2)) 0 -3px 0 inset;
 }
 
 section button:hover {
     box-shadow: rgba(var(--shadow-color), 0.4) 0 4px 8px,
-                rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
-                rgb(var(--hover-color)) 0 -3px 0 inset;
+    rgba(var(--shadow-color), 0.3) 0 7px 13px -3px,
+    rgb(var(--hover-color)) 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
@@ -227,7 +228,6 @@ section button:active {
     font-style: italic; /* Texte en italique */
     margin-bottom: 10px; /* Espacement en dessous */
 }
-
 
 
 /* --- Pied de page --- */
@@ -269,7 +269,7 @@ li:nth-child(n1+1) {
     .maingrid {
         flex-direction: column;
     }
-    
+
     .scdgrid {
         flex-direction: column;
     }
@@ -284,15 +284,15 @@ li:nth-child(n1+1) {
     .header ul {
         font-size: 14px;
     }
-    
+
     h1, h2 {
         font-size: 18px;
     }
-    
+
     h4, h5, p {
         font-size: 14px;
     }
-    
+
     .image {
         width: 120px;
         height: 120px;

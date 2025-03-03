@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères en UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Active le mode de compatibilité pour les dernières versions d'Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Permet d'adapter la mise en page aux appareils mobiles -->
+    <meta name="description"
+          content="Projet 3: To Do List de Kévin - Gérez vos tâches efficacement avec cette application.">
+    <meta name="keywords" content="to do list, gestion de tâches, projet 3, Kévin, développeur web, application web">
+    <meta name="author" content="Kévin">
+    <meta name="robots" content="index, follow"> <!-- Autorise les robots à indexer la page et suivre les liens -->
+
+    <!-- Balises Open Graph pour le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Projet 3: To Do List de Kévin"> <!-- Titre de la page partagée -->
+    <meta property="og:description" content="Gérez vos tâches efficacement avec l'application To Do List de Kévin.">
+    <!-- Description de la page partagée -->
+    <meta property="og:type" content="website"> <!-- Type de contenu partagé -->
+    <meta property="og:url" content="http://yourdomain.com/projet3/todolist.html"> <!-- URL de la page partagée -->
+    <meta property="og:image" content="http://yourdomain.com/asset/img/Logo.JPG">
+    <!-- Image de partage sur les réseaux sociaux -->
+
+    <!-- Balises Twitter Card pour le partage sur Twitter -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Type de carte Twitter utilisé (grande image) -->
+    <meta name="twitter:title" content="Projet 3: To Do List de Kévin"> <!-- Titre de la carte Twitter -->
+    <meta name="twitter:description" content="Gérez vos tâches efficacement avec l'application To Do List de Kévin.">
+    <!-- Description de la carte Twitter -->
+    <meta name="twitter:image" content="http://yourdomain.com/asset/img/Logo.JPG"> <!-- Image de la carte Twitter -->
+
+    <link rel="stylesheet" href="/src/asset/css/style.css"> <!-- Lien vers la feuille de style CSS du site -->
+    <link rel="stylesheet" href="/src/asset/css/tdstyle.css"> <!-- Lien vers la feuille de style CSS du site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/src/asset/img/logo.JPG" type="image/x-icon"> <!-- Lien vers l'icône du site (favicon) -->
+    <title>Projet 3: To do liste de Kévin</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+</head>
+<body>
+<header id="header">
+    <!-- Navigation principale -->
+    <!-- Fin Navigation principale -->
+</header>
+
+<main>
+    <section id="home" class="section">
+        <div>
+            <h2>To Do List</h2>
+        </div>
+
+        <form>
+            <select id="filter" class="filter">
+                <option value="all">Toutes</option>
+                <option value="completed">Complétées</option>
+                <option value="uncompleted">Non complétées</option>
+            </select>
+            <input type="text" id="task" placeholder="Ajouter une tâche" class="input">
+            <button type="submit" id="addTask" class="add">Ajouter</button>
+
+        </form>
+
+
+
+        <div id="taskList">
+            <ul id="tasks" class="todo-list">
+                <!--Import des tâches via Js-->
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <!-- Section des icônes -->
+    <!-- Fin de section des icônes; -->
+
+    <!-- Section de &copy; -->
+    <!-- Fin de section de &copy; -->
+</footer>
+
+<script src="/src/asset/js/main.js"></script>
+<script src="/src/asset/js/tdscript.js"></script>
+</body>
+</html>

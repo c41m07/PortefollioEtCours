@@ -1,4 +1,21 @@
 /* ======================================
+   constrast checker:
+    background: #121212;
+    color: #39ff14;
+    color2: #ff073a;
+resultat: background avec color= 13.81:1 - **** -
+resultat: background avec color2= 4.76:1 - **** -
+resultat si color est background et color2 est color= 2.89:1 - * -
+resultat si color2 est background et color est color= 2.89 - * -
+resulta si color est background et background est color= 13.81:1 - **** -
+resulta si color2 est background et background est color=4.76:1 - **** -
+
+
+
+====================================== */
+
+
+/* ======================================
    Styles Globaux
    - Styles de base et réinitialisation
 ====================================== */
@@ -11,9 +28,9 @@
 /* Style pour le corps de la page */
 body {
     background-color: #121212; /* Couleur de fond sombre */
-    color: #e0e0e0;            /* Couleur du texte claire */
+    color: #e0e0e0; /* Couleur du texte claire */
     font-family: Arial, sans-serif; /* Police de caractères */
-    overflow-x: hidden;        /* Empêche le défilement horizontal */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 /* ======================================
@@ -21,19 +38,19 @@ body {
    - Styles pour la barre de navigation supérieure
 ====================================== */
 nav {
-    position: fixed;           /* Navigation fixe en haut */
+    position: fixed; /* Navigation fixe en haut */
     top: 0;
     width: 100%;
-    background: #1e1e1e;       /* Fond de la barre de navigation */
+    background: #1e1e1e; /* Fond de la barre de navigation */
     border-bottom: 1px solid #333; /* Bordure inférieure */
-    z-index: 1000;             /* Assure la superposition au-dessus des autres éléments */
+    z-index: 1000; /* Assure la superposition au-dessus des autres éléments */
 }
 
 nav ul {
-    list-style: none;          /* Suppression des puces */
-    display: flex;             /* Utilisation de flexbox */
+    list-style: none; /* Suppression des puces */
+    display: flex; /* Utilisation de flexbox */
     align-items: center;
-    justify-content: center;   /* Centre le contenu */
+    justify-content: center; /* Centre le contenu */
     padding: 10px;
 }
 
@@ -62,7 +79,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #39ff14;            /* Changement de couleur au survol */
+    color: #39ff14; /* Changement de couleur au survol */
 }
 
 /* Style pour le logo dans la navigation */
@@ -141,12 +158,12 @@ nav ul li:first-child a img {
 ====================================== */
 .section {
     padding: 100px 20px;
-    min-height: 100vh;         /* Hauteur minimale égale à la hauteur de la fenêtre */
+    min-height: 100vh; /* Hauteur minimale égale à la hauteur de la fenêtre */
 }
 
 .container {
     max-width: 1000px;
-    margin: auto;              /* Centrage du conteneur */
+    margin: auto; /* Centrage du conteneur */
 }
 
 h2 {
@@ -181,7 +198,7 @@ h2 {
 }
 
 .card:hover {
-    transform: scale(1.05);    /* Agrandir légèrement la carte au survol */
+    transform: scale(1.05); /* Agrandir légèrement la carte au survol */
     box-shadow: 0 0 15px #39ff14; /* Ajout d'une ombre pour mettre en valeur */
 }
 
@@ -229,5 +246,5 @@ form button {
 }
 
 form button:hover {
-    background: #2ecc71;        /* Changement de couleur au survol du bouton */
+    background: #2ecc71; /* Changement de couleur au survol du bouton */
 }
