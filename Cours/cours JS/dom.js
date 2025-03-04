@@ -25,40 +25,42 @@
 //     console.log(`formulaire soumis avec le nom : ${inputName},${inputEmail},${inputSubject},${inputMessage}`);
 //     monFormulaire.reset();
 // });
-const inputName = document.getElementById('inputName');
-const inputEmail = document.getElementById('inputEmail');
-const inputSubject = document.getElementById('inputSubject');
-const inputMessage = document.getElementById('inputMessage');
-const monFormulaire = document.getElementById('monFormulaire');
 
-function champvid(field) {
-    return field.value.trim() === '';
-}
+// ===== PROTECTION CONTRE LES ATTAQUES XSS =====
+// La fonction escapeHtml convertit les caractères spéciaux en entités HTML
+// Cela empêche l'injection de code malveillant (attaques XSS)
+// Par exemple: "<script>" devient "&lt;script&gt;" et ne sera pas exécuté comme du code
 
-function setError(field, message) {
-    field.value = message;
-    field.style.borderColor = 'red';
-    field.style.borderWidth = '1px';
-    field.style.borderStyle = 'solid';
-}
+// Fonction de vérification du formulaire
+// function checkForm() {
+//     const inputs = document.querySelectorAll('#monFormulaire input, #monFormulaire textarea');
+//     let formIsValid = true;
 
-monFormulaire.addEventListener('submit', function(e) {
-    e.preventDefault();
+//     inputs.forEach(input => {
+//         if (input.value.trim() === '') {
+//             input.style.border = '2px solid red';
+//             formIsValid = false;
+//         }else {
+//             input.style.border = '2px solid green';
+//         }
+//     });
+//     return formIsValid;
+// }
+// Vérification à la soumission
+// document.getElementById('monFormulaire').addEventListener('submit', function(event) {
+//     if(!checkForm()) {
+//         event.preventDefault();
+//         alert('Veuillez remplir tous les champs du formulaire.');
+//     }
+// });
 
-    const isNameEmpty = champvid(inputName);
-    const isEmailEmpty = champvid(inputEmail);
-    const isSubjectEmpty = champvid(inputSubject);
-    const isMessageEmpty = champvid(inputMessage);
-
-    if (isNameEmpty || isEmailEmpty || isSubjectEmpty || isMessageEmpty) {
-        if (isNameEmpty) setError(inputName, 'erreur : le champ ne peut pas être vide');
-        if (isEmailEmpty) setError(inputEmail, 'erreur : le champ ne peut pas être vide');
-        if (isSubjectEmpty) setError(inputSubject, 'erreur : le champ ne peut pas être vide');
-        if (isMessageEmpty) setError(inputMessage, 'erreur : le champ ne peut pas être vide');
-        return;
-    }
-
-    console.log(`formulaire soumis avec le nom : ${inputName.value}, ${inputEmail.value}, ${inputSubject.value}, ${inputMessage.value}`);
-    inputName.style.border = 'solid 1px green';
-    monFormulaire.reset();
-});
+// Vérification en temps réel
+// document.querySelectorAll('#monFormulaire input, #monFormulaire textarea').forEach(input => {
+//     input.addEventListener('input', function() {
+//         if(this.value.trim() === ''){
+//             this.style.border = '2px solid red';
+//         } else{
+//             this.style.border = '2px solid green'
+//         }
+//     });
+// });

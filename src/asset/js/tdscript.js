@@ -5,7 +5,6 @@ const todoList = document.querySelector('.todo-list');
 const fltroption = document.getElementById('filter');
 
 //LET
-let compteur = 1;
 let tablist = [];
 
 //LISTENER
@@ -19,15 +18,45 @@ function fadd(event) {
     event.preventDefault();
     console.log('Fonction ok');
 
+    // Vérification si le champ est vide
+    if (!todoInput.value.trim()) {
+        // Créé une notification d'erreur
+        const notifError = document.createElement('div');
+        const iconElement = document.createElement('i');
+        const spaceText = document.createTextNode(' ');
+        const messageText = document.createTextNode('Veuillez entrer du texte avant d\'ajouter');
+        notifError.className = 'notifError';
+
+        iconElement.className = 'fas fa-exclamation-circle';
+        notifError.appendChild(iconElement);
+        notifError.appendChild(spaceText);
+        notifError.appendChild(messageText);
+        document.body.appendChild(notifError);
+
+        // Pop la notification
+        setTimeout(() => {
+            notifError.classList.add('pop');
+        }, 10);
+
+        // Enlève la notification
+        setTimeout(() => {
+            notifError.classList.remove('pop');
+            setTimeout(() => notifError.remove(), 500); // enlève la notification après 500ms
+        }, 3000);
+
+        return; // Sortir de la fonction sans ajouter d'élément
+    }
+
     // ajout Li
     const newli = document.createElement('li');
     newli.classList.add('todo-item');
+    newli.id='todo-'+ Date.now() // ajout d'un id unique
     todoList.appendChild(newli);
 
     // ajout Div pour le texte
     const textDiv = document.createElement('div');
     textDiv.classList.add('text');
-    textDiv.innerText = todoInput.value || `Test ${compteur}`;
+    textDiv.innerText = todoInput.value;
     newli.appendChild(textDiv);
 
     // ajout Div pour les actions
@@ -50,7 +79,6 @@ function fadd(event) {
     checkButton.addEventListener('click', fcheck);
     trashButton.addEventListener('click', fsupp);
     fsave();
-    compteur++;
     todoInput.value = ''; // efface le champ input
 }
 
@@ -66,10 +94,18 @@ function fsupp(event) {
     } else {
         console.log('Erreur check');
         // créé une notification d'erreur
-        const notifError = document.createElement('div');
+        const notifError = document.createElement('div'); // créé un élément div
+        const iconElement = document.createElement('i'); // créé un élément i
+        const spaceText = document.createTextNode(' '); // créé un espace
+        const messageText = document.createTextNode('Veuillez cocher la case avant de supprimer'); // créé un texte
         notifError.className = 'notifError';
-        notifError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Veuillez cocher la case avant de supprimer';
+
+        iconElement.className = 'fas fa-exclamation-circle';
+        notifError.appendChild(iconElement);
+        notifError.appendChild(spaceText);
+        notifError.appendChild(messageText);
         document.body.appendChild(notifError);
+
 
         // pop la notification
         setTimeout(() => {
@@ -84,11 +120,11 @@ function fsupp(event) {
     }
 }
 
-//fonction boutton check
+//fonction bouton check
 function fcheck(event) {
     event.preventDefault();
     console.log('Fonction check ok');
-    const todo = event.target.closest('.todo-item'); // Get the parent li element
+    const todo = event.target.closest('.todo-item'); // récupérer le parent li
     todo.classList.toggle('completed');
     fsave();
 }
@@ -105,11 +141,12 @@ function fsave() {
             name: item.querySelector('.text').innerText,
             completed: item.classList.contains('completed')
         });
-        localStorage.setItem('tablist', JSON.stringify(tablist));
+        //localStorage.setItem('tablist', JSON.stringify(tablist));
     });
+    localStorage.setItem('tablist', JSON.stringify(tablist));
 }
 
-//fonction de chargement des données
+//fonction de chargement des données en local
 function fload() {
     console.log('Fonction load ok');
     const data = localStorage.getItem('tablist');
@@ -120,6 +157,7 @@ function fload() {
         tablist.forEach((todo) => {
             // Crée un élément de liste
             const newli = document.createElement('li');
+            newli.id=todo.id;
             newli.classList.add('todo-item');
 
             // Div pour le texte

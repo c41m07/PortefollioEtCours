@@ -47,14 +47,17 @@
         </div>
 
         <form>
-            <select id="filter" class="filter">
-                <option value="all">Toutes</option>
-                <option value="completed">Complétées</option>
-                <option value="uncompleted">Non complétées</option>
-            </select>
-            <input type="text" id="task" placeholder="Ajouter une tâche" class="input">
-            <button type="submit" id="addTask" class="add">Ajouter</button>
-
+            <div class="first-row">
+                <input type="text" id="task" placeholder="Ajouter une tâche" class="input">
+                <select id="filter" class="filter">
+                    <option value="all">Toutes</option>
+                    <option value="completed">Complétées</option>
+                    <option value="uncompleted">Non complétées</option>
+                </select>
+            </div>
+            <div class="second-row">
+                <button type="submit" id="addTask" class="add">Ajouter</button>
+            </div>
         </form>
 
 

@@ -1,60 +1,75 @@
-#home form{
-    flex-direction: row !important;
+/* Formulaire général placé dans #home qui écrase l'autre css */
+#home form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#home .input {
-    flex: 1;
-    order: 1;
-    width: auto;
+/* Première ligne : input et select côte à côte */
+.first-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-#home select {
-    order: 3;
+/* Champ input  */
+.first-row .input {
+    width: 400px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+/* Menu de tri (select) placé à droite de l'input */
+.first-row .filter {
+    padding: 10px;
+    font-size: 1em;
     border-radius: 5px;
     border: none;
     background: #39ff14;
     color: #121212;
     cursor: pointer;
-    margin-right: 0;
-    width: auto;
-    flex-shrink: 0;
 }
 
-#home select:focus {
+/* Focus sur le select */
+.first-row .filter:focus {
     background: #ff073a;
     color: #fff;
-    flex-shrink: 0;
 }
 
-.add {
-    order: 2;
-    white-space: nowrap;
+/* Deuxième ligne : bouton Ajouter centré */
+.second-row {
+    display: flex;
+    justify-content: center;
 }
 
+.second-row .add {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #39ff14;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Changement de couleur au survol du bouton */
+.second-row .add:hover {
+    background: #2ecc71;
+}
+
+/* Style de la liste des tâches */
 .todo-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 60px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin: 60px 30%;
     list-style-type: none;
 }
-.actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: auto;
-}
 
-.text {
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
+/* Style de chaque tâche */
 .todo-item {
     display: flex;
     align-items: center;
@@ -65,6 +80,21 @@
     border: 1px solid #39ff14;
 }
 
+/* Texte de la tâche */
+.todo-item .text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Zone des actions (boutons) dans chaque tâche */
+.todo-item .actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Boutons dans la tâche */
 .todo-item button {
     display: flex;
     justify-content: center;
@@ -85,23 +115,28 @@
     pointer-events: none;
 }
 
-.delete:hover {
+/* Style au survol pour le bouton de suppression */
+.todo-item .delete:hover {
     background: #ff073a;
     color: #e0e0e0;
-
 }
 
-.checkbox:hover {
+/* Style au survol pour le bouton de validation */
+.todo-item .checkbox:hover {
     background: #2ecc71;
 }
 
-.completed {
-    text-decoration: line-through;
+/* Tâche complétée */
+.todo-item.completed {
     opacity: 0.3;
-    background: #1e1e1e;
     border: 1px solid #ff073a;
 }
 
+.todo-item.completed .text {
+    text-decoration: line-through;
+}
+
+/* Notification d'erreur */
 .notifError {
     position: fixed;
     bottom: 30px;
@@ -120,6 +155,7 @@
     transition: transform 0.3s, opacity 0.3s;
 }
 
+/* Affichage de la notification */
 .notifError.pop {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
