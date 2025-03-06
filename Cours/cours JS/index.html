@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <title>Formulaire vulnérable au XSS</title>
 </head>
 <body>
-<form id="monFormulaire">
-    <div class="row mb-3">
-        <label for="inputName" class="col-sm-2 col-form-label">Nom</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputName">
-        </div>
-    </div>
-    <div class="row mb-3">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail">
-        </div>
-    </div>
-    <div class="row mb-3">
-        <label for="inputSubject" class="col-sm-2 col-form-label">Sujet</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputSubject">
-        </div>
-    </div>
-    <fieldset class="row mb-3">
-        <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
-        <div class="col-sm-10">
-            <textarea class="col-sm-2 col-form-label" name="inputMessage" id="inputMessage"></textarea>
-        </div>
+<!-- Formulaire de saisie -->
+<form id="myForm">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom"><br><br>
 
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Envoyer</button>
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom"><br><br>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message"></textarea><br><br>
+
+    <button type="submit">Envoyer</button>
 </form>
+
+<!-- Zone d'affichage des données -->
+<div id="output"></div>
 
 <script src="dom.js"></script>
 </body>

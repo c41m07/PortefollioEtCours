@@ -164,3 +164,21 @@
 .notifError i {
     font-size: 18px;
 }
+
+
+/* Style pour la date et le compte à rebours */
+.todo-item .deadline {
+    font-size: 0.8em;
+    color: #39ff14;
+    margin-right: 15px;
+}
+
+/* Effet clignotant */
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+.deadline-passed {
+    animation: blink 1s linear infinite;
+    border-color: #ff073a !important;
+}

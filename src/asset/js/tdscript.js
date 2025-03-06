@@ -1,18 +1,18 @@
-//CONST
+////////////////////////////////////////////////////CONST//////////////////////////////////////////////////////////////
 const todoInput = document.querySelector('.input');
 const todoaddButton = document.querySelector('.add');
 const todoList = document.querySelector('.todo-list');
 const fltroption = document.getElementById('filter');
 
-//LET
+////////////////////////////////////////////////////LET////////////////////////////////////////////////////////////////
 let tablist = [];
 
-//LISTENER
+////////////////////////////////////////////////////LISTENER////////////////////////////////////////////////////////////
 todoaddButton.addEventListener('click', fadd);
 fltroption.addEventListener('change', ffiltre);
 addEventListener(`load`, fload);
 
-//FUNCTIONS
+////////////////////////////////////////////////////FUNCTION//////////////////////////////////////////////////////////////
 //fonction bouton ajouter
 function fadd(event) {
     event.preventDefault();
@@ -20,13 +20,12 @@ function fadd(event) {
 
     // Vérification si le champ est vide
     if (!todoInput.value.trim()) {
-        // Créé une notification d'erreur
+         // Créé une notification d'erreur
         const notifError = document.createElement('div');
         const iconElement = document.createElement('i');
         const spaceText = document.createTextNode(' ');
         const messageText = document.createTextNode('Veuillez entrer du texte avant d\'ajouter');
         notifError.className = 'notifError';
-
         iconElement.className = 'fas fa-exclamation-circle';
         notifError.appendChild(iconElement);
         notifError.appendChild(spaceText);

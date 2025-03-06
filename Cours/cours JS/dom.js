@@ -64,3 +64,54 @@
 //         }
 //     });
 // });
+
+    // Ce script est vulnérable aux attaques XSS : il insère directement et
+    // les données utilisateur dans le DOM sans aucune sécurisation.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche l'envoi du formulaire pour rester sur la même page
+
+    // Récupération des valeurs saisies
+    const nom = document.getElementById('nom').value;
+    const prenom = document.getElementById('prenom').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Insertion des données dans le DOM avec innerHTML, sans échappement (vulnérable au XSS)
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = '<h2>Informations reçues :</h2>' +
+        '<p>Nom : ' + nom + '</p>' +
+        '<p>Prénom : ' + prenom + '</p>' +
+        '<p>Email : ' + email + '</p>' +
+        '<p>Message : ' + message + '</p>';
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// document.getElementById('myForm').addEventListener('submit', function(e) {
+//     e.preventDefault(); // Empêche l'envoi du formulaire pour rester sur la même page
+//
+//     // Fonction d'échappement pour éviter les attaques XSS
+//     function escapeHtml(unsafe) {
+//         return unsafe
+//             .replace(/&/g, "&amp;")
+//             .replace(/</g, "&lt;")
+//             .replace(/>/g, "&gt;")
+//             .replace(/"/g, "&quot;")
+//             .replace(/'/g, "&#039;");
+//     }
+//
+//     // Récupération des valeurs saisies et échappement
+//     const nom = escapeHtml(document.getElementById('nom').value);
+//     const prenom = escapeHtml(document.getElementById('prenom').value);
+//     const email = escapeHtml(document.getElementById('email').value);
+//     const message = escapeHtml(document.getElementById('message').value);
+//
+//     // Insertion des données dans le DOM avec innerHTML, après échappement
+//     const outputDiv = document.getElementById('output');
+//     outputDiv.innerHTML = '<h2>Informations reçues :</h2>' +
+//         '<p>Nom : ' + nom + '</p>' +
+//         '<p>Prénom : ' + prenom + '</p>' +
+//         '<p>Email : ' + email + '</p>' +
+//         '<p>Message : ' + message + '</p>';
+// });
