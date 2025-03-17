@@ -1,4 +1,4 @@
-**Cours HTML et CSS **
+# Cours HTML et CSS 
 
 ## Introduction
 Ce cours aborde de façon détaillée les bases nécessaires à la création d'une page web complète à l'aide de HTML et CSS. Idéal pour développeurs juniors débutants.

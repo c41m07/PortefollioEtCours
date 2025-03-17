@@ -1,4 +1,4 @@
-# Cours JavaScript pour Débutants
+# Cours JavaScript 
 
 ## 1. Variables
 

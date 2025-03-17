@@ -1,4 +1,4 @@
-**Cours CSS**
+# Cours CSS
 
 ## 1. Sélecteurs CSS
 
