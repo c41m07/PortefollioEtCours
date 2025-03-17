@@ -6,12 +6,12 @@ const etagere = 'mon étagère';
 
 
 if (boite == 'ma boite') {
-    let boite2 = 'ma boite 2';
-    // console.log(boite2);
-    boite2 = 'ma nouvelle boite 2';
-    // console.log(boite2);
+  let boite2 = 'ma boite 2';
+  // console.log(boite2);
+  boite2 = 'ma nouvelle boite 2';
+  // console.log(boite2);
 
-    const etagere2 = 'mon etagere 2';
+  const etagere2 = 'mon etagere 2';
 }
 
 // impossible afficher variable car portée des let uniquement dans le bloc et bloc enfant
@@ -27,36 +27,24 @@ marquesVoiture.push('Audi');
 // la boucle s'arrête après le dernier élément du tableau
 // marque peut etre une const ou un let tout dépend de si on doit modifier sa valeur
 for (const marque of marquesVoiture) {
-    //console.log(marque);
+  //console.log(marque);
 }
 
 // boucle for in utilise l'index du tableau pour parcourir chaque élément
 // à utiliser sur des objets (on les verra plus tard)
 for (const index in marquesVoiture) {
-    //console.log(index);
-    //console.log(marquesVoiture[index]);
+  //console.log(index);
+  //console.log(marquesVoiture[index]);
 }
 
 // ici la boucle for possède un varaible i qui va s'incrémenter à chaque itération (tour de boucle)
-//console.log(marquesVoiture.length);
+console.log(marquesVoiture.length);
 for (let i = 0 ; i < marquesVoiture.length ; i++) {
-    //console.log(marquesVoiture[i]);
+  //console.log(marquesVoiture[i]);
 }
 
-//EXO1//
+
 // écrire un petit programme permettant de calculer la moyenne des notes suivantes :
 // pnesez boucle, portée des variables
 // le must une fonction calculMoyenne();
 const notes = [10, 15, 8, 12, 14.5, 13.5];
-//notes.push(18,20,300,200,300);
-console.log(notes);
-    const calculMoyenne = (notes) => {
-        let somme = 0;
-        for (const valeur of notes) {
-            somme += valeur;
-        }
-        return somme / notes.length;
-    }
-   calculMoyenne(notes);
-    console.log(calculMoyenne(notes));
-

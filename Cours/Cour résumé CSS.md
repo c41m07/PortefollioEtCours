@@ -1,4 +1,4 @@
-**Cours CSS Simplifié et Détaillé pour Débutants
+**Cours CSS**
 
 ## 1. Sélecteurs CSS
 
