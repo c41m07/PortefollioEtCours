@@ -69,23 +69,23 @@
     // les données utilisateur dans le DOM sans aucune sécurisation.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-document.getElementById('myForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche l'envoi du formulaire pour rester sur la même page
-
-    // Récupération des valeurs saisies
-    const nom = document.getElementById('nom').value;
-    const prenom = document.getElementById('prenom').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Insertion des données dans le DOM avec innerHTML, sans échappement (vulnérable au XSS)
-    const outputDiv = document.getElementById('output');
-    outputDiv.innerHTML = '<h2>Informations reçues :</h2>' +
-        '<p>Nom : ' + nom + '</p>' +
-        '<p>Prénom : ' + prenom + '</p>' +
-        '<p>Email : ' + email + '</p>' +
-        '<p>Message : ' + message + '</p>';
-});
+// document.getElementById('myForm').addEventListener('submit', function(e) {
+//     e.preventDefault(); // Empêche l'envoi du formulaire pour rester sur la même page
+//
+//     // Récupération des valeurs saisies
+//     const nom = document.getElementById('nom').value;
+//     const prenom = document.getElementById('prenom').value;
+//     const email = document.getElementById('email').value;
+//     const message = document.getElementById('message').value;
+//
+//     // Insertion des données dans le DOM avec innerHTML, sans échappement (vulnérable au XSS)
+//     const outputDiv = document.getElementById('output');
+//     outputDiv.innerHTML = '<h2>Informations reçues :</h2>' +
+//         '<p>Nom : ' + nom + '</p>' +
+//         '<p>Prénom : ' + prenom + '</p>' +
+//         '<p>Email : ' + email + '</p>' +
+//         '<p>Message : ' + message + '</p>';
+// });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // document.getElementById('myForm').addEventListener('submit', function(e) {
@@ -115,3 +115,60 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 //         '<p>Email : ' + email + '</p>' +
 //         '<p>Message : ' + message + '</p>';
 // });
+
+// fonction qui permet de calculer la moyenne en fonction d'un tableau de note
+// function calculMoyenne(notes) {
+//     let totalNote = null;
+//
+//     for (const note of notes) {
+//         if (totalNote == null) {
+//             totalNote = note;
+//         } else {
+//             totalNote += note;
+//         }
+//     }
+//
+//     return (totalNote / notes.length).toFixed(2);
+// }
+//
+// const notesLaurent = [10, 15, 8, 12, 14.5, 13.5];
+// const notesPierre = [12.5, 8, 9, 10];
+//
+// const moyenneLaurent = calculMoyenne(notesLaurent);
+// const moyennePierre = calculMoyenne(notesPierre);
+//
+// if (moyenneLaurent >= 15) {
+//     console.log('Bravo vous avez les félicitations');
+// } else if (moyenneLaurent >= 13 && moyenneLaurent < 15) {
+//     console.log('Bravo vous avez les compliments');
+// } else if (moyenneLaurent >= 10 && moyenneLaurent < 13) {
+//     console.log('Bravo vous avez les encouragement');
+// } else {
+//     console.log('Vous avez encore du travail à faire');
+// }
+
+
+
+// Bonus avec objet au lieu de tableau
+/*
+const notesEleves = {
+  pierre: [12.5, 8, 9, 10],
+  laurent: [10, 15, 8, 12, 14.5, 13.5],
+};
+
+for (const eleve in notesEleves) {
+  console.log(`La moyenne de ${eleve} est de ${calculMoyenne(notesEleves[eleve])}`)
+}
+
+console.log(calculMoyenne(notesEleves.laurent))*/
+
+
+const maDiv = document.getElementById("ma-div");
+maDiv.innerText = "mon texte"
+maDiv.innerHTML = "<span>mon texte</span>";
+
+maDiv.style.marginTop = "18px";
+maDiv.classList.add("autre-class");
+maDiv.addEventListener("click", function(){
+    console.log("test");
+})

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effet Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<script>
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    // Taille du canvas = taille de la fenêtre
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Caractères utilisés dans l'effet
+    const characters = "01XΩΣΨΛΓΔ∮⌘";
+    const charArray = characters.split("");
+
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+
+    // Tableau des positions Y des colonnes
+    const drops = new Array(columns).fill(0);
+
+    function drawMatrixEffect() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Effet de traînée
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#0F0"; // Texte vert
+        ctx.font = `${fontSize}px monospace`;
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = charArray[Math.floor(Math.random() * charArray.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+
+            ctx.fillText(text, x, y);
+
+            // Réinitialise la colonne une fois qu'elle sort de l'écran
+            if (y > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            drops[i]++;
+        }
+    }
+
+    setInterval(drawMatrixEffect, 50); // Rafraîchissement toutes les 50ms
+
+    // Recalculer la taille du canvas si la fenêtre change
+    window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
+</body>
+</html>

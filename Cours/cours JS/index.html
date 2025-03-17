@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Formulaire vulnérable au XSS</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="assets/js/app.js" defer></script>
+
+    <title>Document</title>
+
+    <div id="ma-div">
+
+
+    </div>
 </head>
 <body>
-<!-- Formulaire de saisie -->
-<form id="myForm">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom"><br><br>
+<div>
 
-    <label for="prenom">Prénom :</label>
-    <input type="text" id="prenom" name="prenom"><br><br>
-
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email"><br><br>
-
-    <label for="message">Message :</label>
-    <textarea id="message" name="message"></textarea><br><br>
-
-    <button type="submit">Envoyer</button>
-</form>
-
-<!-- Zone d'affichage des données -->
-<div id="output"></div>
-
-<script src="dom.js"></script>
+</div>
 </body>
 </html>

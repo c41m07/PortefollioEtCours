@@ -60,14 +60,13 @@ php -S 127.0.0.1:80
 ```
 
 Bug a Fix:
-- Dans todoList.html: voir pourquoi la derniére tache ajouter ne ce suprime pas.
+-
 ------------------------------------------------------------------------------------------------------------------------
 
 feature a intégrer:
 -WIP.html doit permettre de retourner sur index.html via la nav bar home
 -WIP.html ne doit afficher que home dans la nav bar
--Faire en sorte de pouvoir trié les tache dans TDlist.html
--faire en sorte que le texte de la todolist soit éfacer une fois la tache ajouter
+
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -83,7 +82,7 @@ update a venir:
 Projets a construire:
 - [X] Créé un CV en HTML/CSS 
 - [ ] Créé un site web pour une association en HTML/CSS
-- [/] Créé une todoList en HTML/CSS/JS
+- [x] Créé une todoList en HTML/CSS/JS
 
 ```
 
