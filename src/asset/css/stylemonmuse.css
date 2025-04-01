@@ -1,0 +1,18 @@
+:root {
+    --main-bg: #f0f0f0;
+    --main-text: #333;
+    --highlight: #0056b3;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+}
+
+#viewer {
+    width: 100%;
+    height: 80vh;
+    border: 2px solid var(--highlight);
+    border-radius: 8px;
+}
+
