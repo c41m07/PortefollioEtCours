@@ -2,41 +2,38 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8"> <!-- Définit l'encodage des caractères en UTF-8 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <!-- Active le mode de compatibilité pour les dernières versions d'Internet Explorer -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Permet d'adapter la mise en page aux appareils mobiles -->
-    <meta name="description"
-          content="Portfolio de Kévin - Découvrez mes projets, mon expérience et mes compétences en développement web.">
+    <meta content="Portfolio de Kévin - Découvrez mes projets, mon expérience et mes compétences en développement web." name="description">
     <!-- Fournit une description concise pour les moteurs de recherche -->
-    <meta name="keywords" content="portfolio, développement, web, projets, CV">
+    <meta content="portfolio, développement, web, projets, CV" name="keywords">
     <!-- Définit des mots-clés pour le référencement -->
-    <meta name="author" content="Kévin"> <!-- Indique l'auteur du document -->
-    <meta name="robots" content="index, follow"> <!-- Autorise les robots à indexer la page et suivre les liens -->
+    <meta content="Kévin" name="author"> <!-- Indique l'auteur du document -->
+    <meta content="index, follow" name="robots"> <!-- Autorise les robots à indexer la page et suivre les liens -->
 
     <!-- Balises Open Graph pour le partage sur les réseaux sociaux -->
-    <meta property="og:title" content="portefollio de Kévin">
+    <meta content="portefollio de Kévin" property="og:title">
     <!-- Titre affiché lors du partage sur les réseaux sociaux -->
-    <meta property="og:description"
-          content="Portfolio de Kévin - Découvrez mes projets et expériences en développement web.">
+    <meta content="Portfolio de Kévin - Découvrez mes projets et expériences en développement web." property="og:description">
     <!-- Description affichée lors du partage sur les réseaux sociaux -->
-    <meta property="og:type" content="website"> <!-- Indique le type de contenu (site web) pour le partage social -->
-    <meta property="og:url" content="http://yourdomain.com"> <!-- URL canonique de la page pour les réseaux sociaux -->
-    <meta property="og:image" content="http://yourdomain.com/asset/img/Logo.JPG">
+    <meta content="website" property="og:type"> <!-- Indique le type de contenu (site web) pour le partage social -->
+    <meta content="https://yourdomain.com" property="og:url"> <!-- URL canonique de la page pour les réseaux sociaux -->
+    <meta content="https://yourdomain.com/asset/img/Logo.JPG" property="og:image">
     <!-- Image affichée lors du partage sur les réseaux sociaux -->
 
     <!-- Balises Twitter Card pour le partage sur Twitter -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- Type de carte Twitter utilisé (grande image) -->
-    <meta name="twitter:title" content="portefollio de Kévin"> <!-- Titre affiché dans la carte Twitter -->
-    <meta name="twitter:description"
-          content="Portfolio de Kévin - Découvrez mes projets et expériences en développement web.">
+    <meta content="summary_large_image" name="twitter:card"> <!-- Type de carte Twitter utilisé (grande image) -->
+    <meta content="portefollio de Kévin" name="twitter:title"> <!-- Titre affiché dans la carte Twitter -->
+    <meta content="Portfolio de Kévin - Découvrez mes projets et expériences en développement web." name="twitter:description">
     <!-- Description affichée dans la carte Twitter -->
-    <meta name="twitter:image" content="http://yourdomain.com/asset/img/Logo.JPG">
+    <meta content="https://yourdomain.com/asset/img/Logo.JPG" name="twitter:image">
     <!-- Image affichée dans la carte Twitter -->
 
-    <link rel="stylesheet" href="/src/asset/css/style.css"> <!-- Lien vers la feuille de style CSS du site -->
-    <link rel="icon" href="/src/asset/img/logo.JPG" type="image/x-icon"> <!-- Lien vers l'icône du site (favicon) -->
-    <title>portefollio de Kévin</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <link href="/src/asset/css/style.css" rel="stylesheet"> <!-- Lien vers la feuille de style CSS du site -->
+    <link href="/src/asset/img/logo.JPG" rel="icon" type="image/x-icon"> <!-- Lien vers l'icône du site (favicon) -->
+    <title>portefollio de Kévin</title> <!-- Titre de la page affichée dans l'onglet du navigateur -->
 </head>
 <body>
 <header id="header">
@@ -46,7 +43,7 @@
 
 <main id="main">
     <!-- Section Accueil avec écran de démarrage -->
-    <section id="home" class="section">
+    <section class="section" id="home">
         <div id="splash">
             <h1>Bienvenue sur mon portfolio</h1>
         </div>
@@ -60,7 +57,7 @@
     </section>
 
     <!-- Section À Propos -->
-    <section id="about" class="section">
+    <section class="section" id="about">
         <div class="container">
             <h2>À Propos</h2>
             <p>
@@ -72,14 +69,14 @@
     </section>
 
     <!-- Section Galerie de Projets -->
-    <section id="projects" class="section">
+    <section class="section" id="projects">
         <div class="container">
             <h2>Projets</h2>
             <div class="project-grid">
                 <!-- ligne 1 gauche -->
                 <div class="card" style="visibility: visible">
                     <a href="/src/pages/projet2/monmuse.html">
-                        <img src="/src/asset/img/projetWIP.jfif" alt="Projet 2">
+                        <img alt="Projet 2" src="/src/asset/img/projetWIP.jfif">
                     </a>
                     <h3>Projet 2: Faire un Site web en HTML/CSS</h3>
                     <p>Ce projet consiste à créer un site web en utilisant HTML et CSS. Il inclut des sections pour les
@@ -88,7 +85,7 @@
                 <!-- ligne 1 milieu -->
                 <div class="card" style="visibility: visible">
                     <a href="/src/pages/projet1/CV.html">
-                        <img src="/src/asset/img/projetCv.png" alt="Projet 1 : Faire un CV">
+                        <img alt="Projet 1 : Faire un CV" src="/src/asset/img/projetCv.png">
                     </a>
                     <h3>Projet 1 : Faire un CV en HTML/CSS</h3>
                     <p>Ce projet consiste à créer un CV en utilisant HTML et CSS. Il inclut des sections pour les
@@ -99,9 +96,9 @@
                 <!-- ligne 1 droite -->
                 <div class="card" style="visibility: visible">
                     <a href="/src/pages/projet3/TDlist.html">
-                        <img src="/src/asset/img/projetTD.png" alt="Projet 2">
+                        <img alt="Projet 2" src="/src/asset/img/projetTD.png">
                     </a>
-                    <h3>Projet 3 : Faire une Todo list en JavaScript</h3>
+                    <h3>Projet 3 : Faire une to-do list en JavaScript</h3>
                     <p>Ce projet consiste à créer une application de liste de tâches en utilisant JavaScript. Il inclut
                         des
                         fonctionnalités pour ajouter, supprimer et marquer des tâches comme terminées.</p>
@@ -109,23 +106,23 @@
                 <!--Ligne 2 gauche -->
                 <div class="card" style="visibility: hidden">
                     <a href="">
-                        <img src="/src/asset/img/projetWIP.jfif" alt="Projet 2">
+                        <img alt="Projet 2" src="/src/asset/img/projetWIP.jfif">
                     </a>
                     <h3>Work in Progress 4</h3>
                     <p>Description du projet Work in Progress 4.</p>
                 </div>
-                <!--Ligne 2  milieu -->
+                <!--Ligne 2 milieu -->
                 <div class="card" style="visibility: hidden">
                     <a href="">
-                        <img src="/src/asset/img/projetWIP.jfif" alt="Projet 2">
+                        <img alt="Projet 2" src="/src/asset/img/projetWIP.jfif">
                     </a>
                     <h3>Work in Progress 5</h3>
                     <p>Description du projet Work in Progress 5.</p>
                 </div>
-                <!--Ligne 2  droite -->
+                <!--Ligne 2 droite -->
                 <div class="card" style="visibility: hidden">
                     <a href="">
-                        <img src="/src/asset/img/projetWIP.jfif" alt="Projet 2">
+                        <img alt="Projet 2" src="/src/asset/img/projetWIP.jfif">
                     </a>
                     <h3>Work in Progress 6</h3>
                     <p>Description du projet Work in Progress 6.</p>
@@ -135,20 +132,20 @@
     </section>
 
     <!-- Section Contact -->
-    <section id="contact" class="section">
+    <section class="section" id="contact">
         <div class="container">
             <h2>Contact</h2>
             <form id="contact-form">
                 <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required>
+                <input id="name" name="name" required type="text">
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input id="email" name="email" required type="email">
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" required rows="5"></textarea>
 
-                <button type="submit" class="btn">Envoyer</button>
+                <button class="btn" type="submit">Envoyer</button>
             </form>
         </div>
     </section>
@@ -156,7 +153,7 @@
 
 <footer id="footer">
     <!-- Section des icônes -->
-    <!-- Fin de section des icônes; -->
+    <!-- Fin de section des icônes ; -->
 
     <!-- Section de &copy; -->
     <!-- Fin de section de &copy; -->

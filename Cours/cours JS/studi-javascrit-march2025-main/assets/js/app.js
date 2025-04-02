@@ -8,41 +8,40 @@ const maDivSelector = document.querySelector('div');
 // maDiv.classList.add('autre-class');
 
 maDiv.addEventListener('click', (event) => {
-  const element = event.currentTarget;
+    const element = event.currentTarget;
 
-  element.classList.toggle('clicked');
+    element.classList.toggle('clicked');
 });
 
 
 const carreBleus = document.querySelectorAll('body > div.carre-bleu');
 
 for (const carreBleu of carreBleus) {
-  console.log(carreBleu);
+    console.log(carreBleu);
 }
 
 console.log('----');
 
 carreBleus.forEach((carreBleu) => {
-  carreBleu.addEventListener('mouseover', (event) => {
-    const target = event.currentTarget;
-    target.style.background = 'green';
-  });
+    carreBleu.addEventListener('mouseover', (event) => {
+        const target = event.currentTarget;
+        target.style.background = 'green';
+    });
 
-  carreBleu.addEventListener('mouseleave', (event) => {
-    const target = event.currentTarget;
-    target.style.removeProperty('background');
-  });
+    carreBleu.addEventListener('mouseleave', (event) => {
+        const target = event.currentTarget;
+        target.style.removeProperty('background');
+    });
 });
 
 
 const googleLink = document.querySelector('#google-link');
 googleLink.addEventListener('click', (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  const maDiv = document.getElementById('ma-div');
-  maDiv.classList.add('clicked');
+    const maDiv = document.getElementById('ma-div');
+    maDiv.classList.add('clicked');
 });
-
 
 
 // Exo

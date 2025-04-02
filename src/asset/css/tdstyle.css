@@ -33,7 +33,6 @@
 }
 
 
-
 /* Menu de tri (select) placé à droite de l'input */
 #filter.filter {
     padding: 10px;
@@ -187,7 +186,9 @@ select#filter.filter:focus {
 
 /* Effet clignotant */
 @keyframes blink {
-    50% { opacity: 0.3; }
+    50% {
+        opacity: 0.3;
+    }
 }
 
 .time-passed {

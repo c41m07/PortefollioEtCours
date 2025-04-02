@@ -215,7 +215,7 @@ function fload() { // Fonction pour charger les tâches sauvegardées au chargem
 function ffiltre(event) { // Fonction pour filtrer l'affichage des tâches
     const todoItems = document.querySelectorAll('.todo-item'); // Récupère toutes les tâches
     console.log('Fonction filtre ok'); // Affiche un message dans la console
-    todoItems.forEach(function(todo) { // Pour chaque tâche
+    todoItems.forEach(function (todo) { // Pour chaque tâche
         switch (event.target.value) { // Selon le filtre sélectionné
             case "all": // Si le filtre est "all"
                 todo.style.display = "flex"; // Affiche la tâche

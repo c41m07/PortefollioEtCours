@@ -2,13 +2,15 @@
 
 ## Introduction
 
-Ce cours complet couvre les bases fondamentales de la création d'une page web avec HTML et CSS. Il est destiné aux développeurs débutants ou juniors qui souhaitent apprendre à structurer et styliser des pages web modernes et responsives.
+Ce cours complet couvre les bases fondamentales de la création d'une page web avec HTML et CSS. Il est destiné aux développeurs débutants ou juniors
+qui souhaitent apprendre à structurer et styliser des pages web modernes et responsives.
 
 ---
 
 ## Partie 1 : HTML
 
 ### 1. Structure de base d'un fichier HTML
+
 ```html
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,6 +42,7 @@ Ce cours complet couvre les bases fondamentales de la création d'une page web a
 ```
 
 ### 2. Éléments sémantiques HTML
+
 - `<header>` : en-tête de page
 - `<nav>` : barre de navigation
 - `<main>` : contenu principal
@@ -49,6 +52,7 @@ Ce cours complet couvre les bases fondamentales de la création d'une page web a
 - `<footer>` : pied de page
 
 ### 3. Contenu HTML courant
+
 - **Titres** : `<h1>` à `<h6>`
 - **Paragraphes** : `<p>`
 - **Texte important** : `<strong>`, `<em>`, `<mark>`
@@ -60,11 +64,13 @@ Ce cours complet couvre les bases fondamentales de la création d'une page web a
 - **Médias** : `<video>`, `<audio>`, `<iframe>`
 
 ### 4. Accessibilité et bonnes pratiques
+
 - Utiliser `alt` sur les images.
 - Ajouter des `label` explicites pour les champs de formulaire.
 - Utiliser `aria-label`, `role`, ou `aria-hidden` si besoin pour les lecteurs d'écran.
 
 ### 5. Commentaires HTML
+
 ```html
 <!-- Ceci est un commentaire HTML -->
 ```
@@ -74,6 +80,7 @@ Ce cours complet couvre les bases fondamentales de la création d'une page web a
 ## Partie 2 : CSS
 
 ### 1. Syntaxe CSS de base
+
 ```css
 sélecteur {
   propriété: valeur;
@@ -81,12 +88,14 @@ sélecteur {
 ```
 
 ### 2. Types de sélecteurs
+
 - `.classe` : sélectionne tous les éléments avec cette classe
 - `#id` : sélectionne l'élément avec cet identifiant (unique)
 - `balise` : sélectionne tous les éléments de ce type
 - `balise.classe`, `balise#id`, `*` (tous les éléments)
 
 ### 3. Variables CSS
+
 ```css
 :root {
   --couleur-primaire: #007bff;
@@ -103,6 +112,7 @@ body {
 ```
 
 ### 4. Box Model
+
 ```css
 .element {
   margin: 10px;
@@ -112,6 +122,7 @@ body {
 ```
 
 ### 5. Positionnement et z-index
+
 ```css
 .element {
   position: relative;
@@ -122,6 +133,7 @@ body {
 ```
 
 ### 6. Flexbox
+
 ```css
 .container {
   display: flex;
@@ -133,6 +145,7 @@ body {
 ```
 
 ### 7. Grid
+
 ```css
 .container {
   display: grid;
@@ -142,6 +155,7 @@ body {
 ```
 
 ### 8. Media Queries
+
 ```css
 @media screen and (max-width: 768px) {
   .element {
@@ -151,6 +165,7 @@ body {
 ```
 
 ### 9. Pseudo-classes et pseudo-éléments
+
 ```css
 .element:hover {
   background-color: var(--couleur-primaire);
@@ -162,6 +177,7 @@ body {
 ```
 
 ### 10. Animations CSS
+
 ```css
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -174,6 +190,7 @@ body {
 ```
 
 ### 11. Transformations
+
 ```css
 .element {
   transform: rotate(45deg);
@@ -185,6 +202,7 @@ body {
 ```
 
 ### 12. Transitions
+
 ```css
 .element {
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -197,6 +215,7 @@ body {
 ```
 
 ### 13. Effets visuels
+
 ```css
 .element {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -205,6 +224,7 @@ body {
 ```
 
 ### 14. Typographie de base
+
 ```css
 body {
   font-family: Arial, sans-serif;
@@ -214,6 +234,7 @@ body {
 ```
 
 ### 15. Commentaires CSS
+
 ```css
 /* Ceci est un commentaire CSS */
 ```
@@ -223,6 +244,7 @@ body {
 ## Partie 3 : Bootstrap - Notions utiles
 
 ### Classes utiles de Bootstrap
+
 - Grille : `.container`, `.row`, `.col`, `.col-md-6`, `.col-lg-4`
 - Texte : `.text-center`, `.text-muted`, `.text-danger`
 - Espacement : `.m-3`, `.p-2`, `.mt-5`, `.mb-4`
@@ -230,6 +252,7 @@ body {
 - Boutons : `.btn`, `.btn-primary`, `.btn-outline-secondary`
 
 ### Exemple d'utilisation d'un bouton :
+
 ```html
 <button class="btn btn-primary">Clique moi</button>
 ```
@@ -238,11 +261,13 @@ body {
 
 ## Conclusion
 
-Avec ce cours HTML et CSS, tu possèdes les bases pour créer une page web bien structurée, esthétique, et responsive. Continue à pratiquer, créer de petites pages, t’inspirer d’autres sites, et tu progresseras rapidement !
+Avec ce cours HTML et CSS, tu possèdes les bases pour créer une page web bien structurée, esthétique, et responsive. Continue à pratiquer, créer de
+petites pages, t’inspirer d’autres sites, et tu progresseras rapidement !
 
 ---
 
 ## Checklist responsive finale
+
 - `viewport` bien défini ✅
 - `media queries` présents ✅
 - Testé sur écrans mobiles ✅

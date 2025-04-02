@@ -6,12 +6,12 @@ const etagere = 'mon étagère';
 
 
 if (boite == 'ma boite') {
-  let boite2 = 'ma boite 2';
-  // console.log(boite2);
-  boite2 = 'ma nouvelle boite 2';
-  // console.log(boite2);
+    let boite2 = 'ma boite 2';
+    // console.log(boite2);
+    boite2 = 'ma nouvelle boite 2';
+    // console.log(boite2);
 
-  const etagere2 = 'mon etagere 2';
+    const etagere2 = 'mon etagere 2';
 }
 
 // impossible afficher variable car portée des let uniquement dans le bloc et bloc enfant
@@ -27,20 +27,20 @@ marquesVoiture.push('Audi');
 // la boucle s'arrête après le dernier élément du tableau
 // marque peut etre une const ou un let tout dépend de si on doit modifier sa valeur
 for (const marque of marquesVoiture) {
-  //console.log(marque);
+    //console.log(marque);
 }
 
 // boucle for in utilise l'index du tableau pour parcourir chaque élément
 // à utiliser sur des objets (on les verra plus tard)
 for (const index in marquesVoiture) {
-  //console.log(index);
-  //console.log(marquesVoiture[index]);
+    //console.log(index);
+    //console.log(marquesVoiture[index]);
 }
 
 // ici la boucle for possède un varaible i qui va s'incrémenter à chaque itération (tour de boucle)
 console.log(marquesVoiture.length);
-for (let i = 0 ; i < marquesVoiture.length ; i++) {
-  //console.log(marquesVoiture[i]);
+for (let i = 0; i < marquesVoiture.length; i++) {
+    //console.log(marquesVoiture[i]);
 }
 
 

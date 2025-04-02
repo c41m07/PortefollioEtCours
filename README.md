@@ -1,6 +1,6 @@
 # PortefollioEtCours
 
-PortefollioEtCours est un site web qui a pour but de présenter mes projets et mes compétences en développement web ainsi 
+PortefollioEtCours est un site web qui a pour but de présenter mes projets et mes compétences en développement web ainsi
 que mes cour.
 
 php -S 127.0.0.1:80
